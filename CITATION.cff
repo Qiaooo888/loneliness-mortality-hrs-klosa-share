@@ -11,11 +11,12 @@ abstract: >
   This repository contains the analysis code for a cross-national causal inference study
   examining the effect of loneliness on all-cause mortality among community-dwelling older
   adults. Using Inverse Probability of Treatment Weighting (IPTW) with weighted Cox
-  regression, the study analyzes data from three longitudinal aging cohorts: the Health
-  and Retirement Study (HRS, USA), the Korean Longitudinal Study of Ageing (KLoSA, Korea),
-  and the Survey of Health, Ageing and Retirement in Europe (SHARE, Europe). The analysis
-  pipeline includes data cleaning, feature engineering, propensity score estimation,
-  weighted survival analysis, SHAP interpretability, and comprehensive sensitivity analyses
+  regression, the study analyzes harmonized data from three longitudinal aging cohorts
+  obtained via the Gateway to Global Aging Data (g2aging.org): the Health and Retirement
+  Study (HRS, USA), the Korean Longitudinal Study of Ageing (KLoSA, Korea), and the
+  Survey of Health, Ageing and Retirement in Europe (SHARE, Europe). The analysis pipeline
+  includes data cleaning, feature engineering, propensity score estimation, weighted
+  survival analysis, SHAP interpretability, and comprehensive sensitivity analyses
   (E-value, competing risks, alternate PS models, leave-one-database-out).
 keywords:
   - loneliness
@@ -33,3 +34,24 @@ keywords:
 license: MIT
 version: 1.0.0
 date-released: "2026-05-06"
+references:
+  - type: dataset
+    title: "Health and Retirement Study"
+    authors:
+      - name: "University of Michigan"
+    url: "https://hrs.isr.umich.edu/"
+  - type: dataset
+    title: "Korean Longitudinal Study of Ageing"
+    authors:
+      - name: "Korea Employment Information Service"
+    url: "https://survey.keis.or.kr/"
+  - type: dataset
+    title: "Survey of Health, Ageing and Retirement in Europe"
+    authors:
+      - name: "SHARE-ERIC"
+    url: "https://share-eric.eu/"
+  - type: dataset
+    title: "Gateway to Global Aging Data"
+    authors:
+      - name: "USC Center for Economic and Social Research"
+    url: "https://g2aging.org/"

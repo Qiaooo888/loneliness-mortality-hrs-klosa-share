@@ -58,13 +58,33 @@ The analysis is organized into 7 sequential parts:
 
 ## Data Access
 
-The analysis uses harmonized data from the following sources. Due to data use agreements, raw data is **not included** in this repository. Users must obtain data independently:
+This study uses publicly available longitudinal aging data. Due to data use agreements, **raw data is not included** in this repository. Users must register and download data independently from the original sources listed below.
 
-- **HRS**: [Health and Retirement Study](https://hrs.isr.umich.edu/) (University of Michigan)
-- **KLoSA**: [Korean Longitudinal Study of Ageing](https://survey.keis.or.kr/) (Korea Employment Information Service)
-- **SHARE**: [Survey of Health, Ageing and Retirement in Europe](https://share-eric.eu/) (SHARE-ERIC)
+### Original Data Sources
 
-Harmonized variables are accessed through the [Gateway to Global Aging Data](https://g2aging.org/).
+All three databases are publicly accessible to registered researchers:
+
+| Database | Full Name | Provider | Website |
+|----------|-----------|----------|---------|
+| HRS | Health and Retirement Study | University of Michigan | [hrs.isr.umich.edu](https://hrs.isr.umich.edu/) |
+| KLoSA | Korean Longitudinal Study of Ageing | Korea Employment Information Service (KEIS) | [survey.keis.or.kr](https://survey.keis.or.kr/) |
+| SHARE | Survey of Health, Ageing and Retirement in Europe | SHARE-ERIC | [share-eric.eu](https://share-eric.eu/) |
+
+### Harmonized Data via Gateway to Global Aging Data (g2aging)
+
+This study uses the **harmonized versions** of these datasets produced by the [Gateway to Global Aging Data](https://g2aging.org/) (also known as Rand HRS Family). The harmonized datasets provide consistently coded variables across all participating longitudinal aging studies, enabling cross-national comparative research.
+
+**Steps to obtain the harmonized data:**
+
+1. Visit [g2aging.org](https://g2aging.org/) and create a free account
+2. Apply for data access (registration is open to all researchers)
+3. Download the harmonized datasets:
+   - `H_HRS` (Harmonized HRS)
+   - `H_KLoSA_e2` (Harmonized KLoSA, easySHARE-based version)
+   - `H_SHARE_f2` (Harmonized SHARE, full version)
+4. Place the downloaded files in the `Original_data/` directory as described below
+
+For details on variable harmonization, refer to the [g2aging documentation](https://g2aging.org/documents) and codebooks.
 
 ## Environment Setup
 
@@ -84,19 +104,21 @@ install.packages(c("survival", "meta", "cmprsk"))
 
 ## Usage
 
-### Step 1: Prepare data
+### Step 1: Download and place data
 
-Place the harmonized data files in the project root under the following structure:
+After downloading the harmonized datasets from [g2aging.org](https://g2aging.org/), place the parquet (or CSV) files in the `Original_data/` directory at the project root:
 
 ```
 Original_data/
 ├── HRS/
-│   └── H_HRS.parquet
+│   └── H_HRS.parquet          # Harmonized HRS (from g2aging.org)
 ├── KLoSA/
-│   └── H_KLoSA_e2.parquet
+│   └── H_KLoSA_e2.parquet     # Harmonized KLoSA (from g2aging.org)
 └── SHARE/
-    └── H_SHARE_f2.parquet
+    └── H_SHARE_f2.parquet     # Harmonized SHARE (from g2aging.org)
 ```
+
+> **Note**: If your downloaded files are in CSV format, modify the `pd.read_parquet()` calls in `part1_data_cleaning.py` to `pd.read_csv()`.
 
 ### Step 2: Run analysis sequentially
 
@@ -166,6 +188,11 @@ If you use this code, please cite:
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Data Use
+## Data Use and Acknowledgments
 
-The analysis uses publicly available survey data subject to their respective data use agreements. Users must comply with the terms of use for HRS, KLoSA, and SHARE data.
+The analysis uses publicly available survey data. Users must comply with the respective data use agreements:
+
+- **HRS**: Produced and distributed by the University of Michigan with funding from the National Institute on Aging (NIA U01AG009740). Users must register at [hrs.isr.umich.edu](https://hrs.isr.umich.edu/) and agree to the HRS data use terms.
+- **KLoSA**: Produced by the Korea Employment Information Service (KEIS). Data is available at [survey.keis.or.kr](https://survey.keis.or.kr/) upon registration.
+- **SHARE**: Produced by SHARE-ERIC with funding from the European Commission. Data is available at [share-eric.eu](https://share-eric.eu/) upon registration.
+- **Gateway to Global Aging Data**: The harmonized datasets were obtained from [g2aging.org](https://g2aging.org/), produced by the USC Center for Economic and Social Research (CESR) with funding from NIA (R01AG030153).
