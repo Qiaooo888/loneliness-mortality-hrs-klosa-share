@@ -70,19 +70,15 @@ All three databases are publicly accessible to registered researchers:
 | KLoSA | Korean Longitudinal Study of Ageing | Korea Employment Information Service (KEIS) | [survey.keis.or.kr](https://survey.keis.or.kr/) |
 | SHARE | Survey of Health, Ageing and Retirement in Europe | SHARE-ERIC | [share-eric.eu](https://share-eric.eu/) |
 
-### Harmonized Data via Gateway to Global Aging Data (g2aging)
+### Data Preparation Workflow
 
-This study uses the **harmonized versions** of these datasets produced by the [Gateway to Global Aging Data](https://g2aging.org/) (also known as Rand HRS Family). The harmonized datasets provide consistently coded variables across all participating longitudinal aging studies, enabling cross-national comparative research.
+The data preparation involves three steps:
 
-**Steps to obtain the harmonized data:**
+1. **Download raw data**: Register at the original data sources above and download the raw public-use datasets (e.g., HRS public use files, KLoSA public data, SHARE release data).
 
-1. Visit [g2aging.org](https://g2aging.org/) and create a free account
-2. Apply for data access (registration is open to all researchers)
-3. Download the harmonized datasets:
-   - `H_HRS` (Harmonized HRS)
-   - `H_KLoSA_e2` (Harmonized KLoSA, easySHARE-based version)
-   - `H_SHARE_f2` (Harmonized SHARE, full version)
-4. Place the downloaded files in the `Original_data/` directory as described below
+2. **Variable harmonization via Gateway to Global Aging Data (g2aging)**: Use the [Gateway to Global Aging Data](https://g2aging.org/) (produced by the USC Center for Economic and Social Research) as a reference for variable harmonization. The g2aging project provides consistently coded variables across all participating longitudinal aging studies, enabling cross-national comparative research. Register at [g2aging.org](https://g2aging.org/) to access the harmonized variable definitions and codebooks, then harmonize the raw data accordingly.
+
+3. **Convert to parquet format**: Save the harmonized datasets as `.parquet` files and place them in the `Original_data/` directory as described below.
 
 For details on variable harmonization, refer to the [g2aging documentation](https://g2aging.org/documents) and codebooks.
 
@@ -104,21 +100,21 @@ install.packages(c("survival", "meta", "cmprsk"))
 
 ## Usage
 
-### Step 1: Download and place data
+### Step 1: Prepare data
 
-After downloading the harmonized datasets from [g2aging.org](https://g2aging.org/), place the parquet (or CSV) files in the `Original_data/` directory at the project root:
+After downloading the raw data from the original sources and harmonizing variables according to the g2aging codebooks, convert the harmonized datasets to parquet format and place them in the `Original_data/` directory at the project root:
 
 ```
 Original_data/
 ├── HRS/
-│   └── H_HRS.parquet          # Harmonized HRS (from g2aging.org)
+│   └── H_HRS.parquet          # Harmonized HRS (raw data from hrs.isr.umich.edu, harmonized via g2aging)
 ├── KLoSA/
-│   └── H_KLoSA_e2.parquet     # Harmonized KLoSA (from g2aging.org)
+│   └── H_KLoSA_e2.parquet     # Harmonized KLoSA (raw data from survey.keis.or.kr, harmonized via g2aging)
 └── SHARE/
-    └── H_SHARE_f2.parquet     # Harmonized SHARE (from g2aging.org)
+    └── H_SHARE_f2.parquet     # Harmonized SHARE (raw data from share-eric.eu, harmonized via g2aging)
 ```
 
-> **Note**: If your downloaded files are in CSV format, modify the `pd.read_parquet()` calls in `part1_data_cleaning.py` to `pd.read_csv()`.
+> **Note**: If your harmonized data is in CSV or other formats, modify the `pd.read_parquet()` calls in `part1_data_cleaning.py` accordingly (e.g., to `pd.read_csv()`), or convert to parquet first.
 
 ### Step 2: Run analysis sequentially
 

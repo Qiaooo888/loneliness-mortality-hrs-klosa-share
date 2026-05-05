@@ -32,7 +32,7 @@ for d in [DATA_DIR, OUTPUT_DIR, OTHER_DIR, TABLE_DIR, FIG_DIR]:
 
 RESULT_FILE = OUTPUT_DIR / "Part1_result.txt"
 
-# Raw data directory (user must provide harmonized data from g2aging.org)
+# Raw data directory (user must provide harmonized parquet data from original sources, harmonized via g2aging)
 RAW_DATA_DIR = PROJECT_ROOT / "Original_data"
 
 def tee_print(msg, f=None):
