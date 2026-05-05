@@ -1,0 +1,52 @@
+Database,Variable,sci_name,SMD_unweighted,SMD_weighted,balanced
+HRS,age,Age,0.1615,0.0099,Yes
+HRS,gender,Gender (Male),-0.2462,-0.1303,No
+HRS,education,Education Level,-0.3771,-0.2013,No
+HRS,married,Married/Partnered,-0.7123,-0.2895,No
+HRS,hibpe,Hypertension,0.2382,0.1083,No
+HRS,diabe,Diabetes,0.1674,0.0784,Yes
+HRS,hearte,Heart Disease,0.1824,0.0748,Yes
+HRS,stroke,Stroke,0.2374,0.1143,No
+HRS,lunge,Lung Disease,0.1928,0.0908,Yes
+HRS,cancre,Cancer,0.0593,-0.0002,Yes
+HRS,arthre,Arthritis,0.2951,0.1399,No
+HRS,depression,Depressive Symptoms,2.0644,0.9164,No
+HRS,srh,Self-Rated Health,0.7438,0.3928,No
+HRS,adl,ADL Limitations,0.7022,0.3399,No
+HRS,iadl,IADL Limitations,0.643,0.2927,No
+HRS,smoken,Current Smoking,0.1902,0.0919,Yes
+HRS,drink,Alcohol Use,-0.2701,-0.13,No
+KLoSA,age,Age,0.4483,0.1211,No
+KLoSA,gender,Gender (Male),-0.0914,0.0031,Yes
+KLoSA,education,Education Level,-0.3813,-0.1005,No
+KLoSA,married,Married/Partnered,-0.4229,-0.2248,No
+KLoSA,hibpe,Hypertension,0.1336,0.0275,Yes
+KLoSA,diabe,Diabetes,0.153,0.0452,Yes
+KLoSA,hearte,Heart Disease,0.1746,0.0511,Yes
+KLoSA,stroke,Stroke,0.2088,0.0511,Yes
+KLoSA,lunge,Lung Disease,0.1276,0.0499,Yes
+KLoSA,cancre,Cancer,0.1076,0.0363,Yes
+KLoSA,arthre,Arthritis,0.2631,0.138,No
+KLoSA,depression,Depressive Symptoms,2.31,0.9666,No
+KLoSA,srh,Self-Rated Health,0.5248,0.1903,No
+KLoSA,adl,ADL Limitations,0.3987,0.1271,No
+KLoSA,iadl,IADL Limitations,0.4249,0.1193,No
+KLoSA,smoken,Current Smoking,-0.1292,-0.0848,Yes
+KLoSA,drink,Alcohol Use,-0.4122,-0.1506,No
+SHARE,age,Age,0.3035,0.0648,Yes
+SHARE,gender,Gender (Male),-0.226,-0.0682,Yes
+SHARE,education,Education Level,-0.3048,-0.0874,Yes
+SHARE,married,Married/Partnered,-0.4753,-0.1044,No
+SHARE,hibpe,Hypertension,0.2006,0.0606,Yes
+SHARE,diabe,Diabetes,0.2015,0.0387,Yes
+SHARE,hearte,Heart Disease,0.24,0.0374,Yes
+SHARE,stroke,Stroke,0.218,0.042,Yes
+SHARE,lunge,Lung Disease,0.2087,0.0392,Yes
+SHARE,cancre,Cancer,0.0708,0.0022,Yes
+SHARE,arthre,Arthritis,0.3353,0.0803,Yes
+SHARE,depression,Depressive Symptoms,1.0754,0.1996,No
+SHARE,srh,Self-Rated Health,0.7308,0.1896,No
+SHARE,adl,ADL Limitations,0.4476,0.0535,Yes
+SHARE,iadl,IADL Limitations,0.4202,0.0427,Yes
+SHARE,smoken,Current Smoking,0.0649,0.0131,Yes
+SHARE,drink,Alcohol Use,-0.1087,-0.0182,Yes

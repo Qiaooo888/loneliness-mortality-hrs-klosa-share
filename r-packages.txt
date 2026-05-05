@@ -1,0 +1,23 @@
+# R package dependencies for this project
+# Install with: install.packages(c("survival", "meta", "cmprsk"))
+#
+# Usage in this project:
+#   - code/Part4_Model_Evaluation/part4_cox_analysis.R
+#   - code/Part6_Sensitivity_Analysis/part6_sensitivity.R
+#
+# Required R version: >= 4.2.0
+
+Package: survival
+Version: >= 3.4.0
+Source: CRAN
+Usage: Weighted Cox PH regression (coxph), proportional hazards test (cox.zph), Kaplan-Meier
+
+Package: meta
+Version: >= 6.0.0
+Source: CRAN
+Usage: Random-effects meta-analysis (metagen), DerSimonian-Laird estimator
+
+Package: cmprsk
+Version: >= 2.2.12
+Source: CRAN
+Usage: Fine-Gray competing risks model (crr)

@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Loneliness and All-Cause Mortality Among Older Adults: A Cross-National Inverse Probability Weighting Study"
+type: software
+authors:
+  - family-names: ""
+    given-names: ""
+    orcid: ""
+repository-code: "https://github.com/<username>/loneliness-mortality-iptw"
+abstract: >
+  This repository contains the analysis code for a cross-national causal inference study
+  examining the effect of loneliness on all-cause mortality among community-dwelling older
+  adults. Using Inverse Probability of Treatment Weighting (IPTW) with weighted Cox
+  regression, the study analyzes data from three longitudinal aging cohorts: the Health
+  and Retirement Study (HRS, USA), the Korean Longitudinal Study of Ageing (KLoSA, Korea),
+  and the Survey of Health, Ageing and Retirement in Europe (SHARE, Europe). The analysis
+  pipeline includes data cleaning, feature engineering, propensity score estimation,
+  weighted survival analysis, SHAP interpretability, and comprehensive sensitivity analyses
+  (E-value, competing risks, alternate PS models, leave-one-database-out).
+keywords:
+  - loneliness
+  - mortality
+  - causal inference
+  - IPTW
+  - inverse probability weighting
+  - older adults
+  - cross-national
+  - HRS
+  - KLoSA
+  - SHARE
+  - Cox regression
+  - propensity score
+license: MIT
+version: 1.0.0
+date-released: "2026-05-06"

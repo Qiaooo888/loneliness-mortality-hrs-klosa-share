@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.whl
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Office temp files
+~$*
+*.tmp
+
+# Data files (raw data not included due to data use agreements)
+Original_data/
+*.parquet
+
+# Large intermediate files
+Other/cleanDataPart*.csv
+Other/cox_input.csv
+Other/cox_results.csv
+Other/sensitivity_input.csv
+Other/sensitivity_results.csv
+Other/model_primary.pkl
+Other/*.json
+Other/*.py
+
+# Project-specific hidden dirs
+Science/
+.claude/
+CLAUDE.md
+.qoder/
+.agents/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+renv/library/
+renv/staging/
+renv/sandbox/
+
+# Manuscript drafts (optional — uncomment if you don't want to track)
+# Manuscript.docx

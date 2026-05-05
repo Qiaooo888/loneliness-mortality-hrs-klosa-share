@@ -1,0 +1,18 @@
+database_name,sci_name,mean_abs_shap
+depression,Depressive Symptoms,1.0984681113100394
+married,Married/Partnered,0.3460007105605084
+srh,Self-Rated Health,0.14311941779396004
+education,Education Level,0.07475079256298932
+age,Age,0.07313156384589055
+adl,ADL Limitations,0.0694860076253478
+iadl,IADL Limitations,0.03884927400992524
+drink,Alcohol Use,0.0258511805710577
+stroke,Stroke,0.018343929172762764
+hearte,Heart Disease,0.015999718981196717
+smoken,Current Smoking,0.01589151451958608
+diabe,Diabetes,0.01574892184058388
+arthre,Arthritis,0.01533815916332138
+gender,Gender (Male),0.009036175976073337
+hibpe,Hypertension,0.008261734581173876
+cancre,Cancer,0.0063748483099223445
+lunge,Lung Disease,0.005245645676884683
