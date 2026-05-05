@@ -1,20 +1,45 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-title: "Analysis code and supplementary materials for loneliness and mortality across HRS, KLoSA, and SHARE"
-version: "v1.0.1"
-date-released: 2026-05-05
+message: "If you use this software, analysis code, or supplementary materials, please cite it as below."
+title: "Analysis code and supplementary materials for Loneliness and All-Cause Mortality Among Older Adults: A Cross-National Inverse Probability Weighting Study"
 type: software
+version: "v1.0.2"
+date-released: 2026-05-06
 license: MIT
+
 authors:
   - family-names: "Zeng"
-    given-names: "ZhiPeng"
+    given-names: "Zhipeng"
+    affiliation: "Guangdong Medical University, Zhanjiang, Guangdong, China; Foshan Fosun Chancheng Hospital, Foshan, Guangdong, China"
+
+  - family-names: "Zeng"
+    given-names: "Qiaoqiao"
+    affiliation: "Guangdong Medical University, Zhanjiang, Guangdong, China"
+
+  - family-names: "Ye"
+    given-names: "Lu"
+    affiliation: "Guangdong Medical University, Zhanjiang, Guangdong, China; Foshan Fosun Chancheng Hospital, Foshan, Guangdong, China"
+
+  - family-names: "Han"
+    given-names: "Wei"
+    affiliation: "Guangdong Medical University, Zhanjiang, Guangdong, China; Foshan Fosun Chancheng Hospital, Foshan, Guangdong, China"
+
 repository-code: "https://github.com/Qiaooo888/loneliness-mortality-hrs-klosa-share"
-abstract: "This repository contains analysis code, tables, figures, and supplementary materials for a study of loneliness and mortality using HRS, KLoSA, and SHARE. Raw restricted-access cohort data are not redistributed."
+url: "https://github.com/Qiaooo888/loneliness-mortality-hrs-klosa-share"
+
+abstract: "This repository contains analysis code, tables, figures, and supplementary materials for a cross-national inverse probability weighting study of loneliness and all-cause mortality among older adults using harmonized data from the Health and Retirement Study, the Korean Longitudinal Study of Aging, and the Survey of Health, Ageing and Retirement in Europe. Raw restricted-access cohort data are not redistributed."
+
 keywords:
- - social isolation
- - survival analysis
- - older adults
- - longitudinal studies
- - propensity score
- - geriatric epidemiology
- - cross-national study
+  - loneliness
+  - mortality
+  - all-cause mortality
+  - older adults
+  - social isolation
+  - survival analysis
+  - inverse probability weighting
+  - propensity score
+  - gradient boosting
+  - geriatric epidemiology
+  - cross-national study
+  - Health and Retirement Study
+  - Korean Longitudinal Study of Aging
+  - Survey of Health, Ageing and Retirement in Europe
